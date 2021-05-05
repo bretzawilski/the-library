@@ -2,6 +2,22 @@
   background-color: black;
 } */
 
+main {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  gap: 10px;
+}
+
+.movie-card {
+  grid-template-columns: 70px 70px 70px;
+  background-color: lightgray;
+  border-radius: 1em;
+}
+
+ul {
+  list-style-type: none;
+}
+
 .modal {
   display: none;
   position: fixed;
