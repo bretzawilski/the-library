@@ -1,6 +1,13 @@
+Version 3
+[] Should have a function to display movies in array on page
+
+Version 2
+[x] Website should have a form to submit information for a new movie
+[x] Website form should operate as a modal dialog  
+
 Version 1
-[] Should have a constructor to make new books
-[] Should have a function to add a new book to the myLibrary array
+[x] Should have a constructor to make new books
+[x] Should have a function to add a new book to the myLibrary array
 
 Questions:
 Can I use the add new function to push the results to the myLibrary array?

@@ -8,15 +8,25 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Movie Card Section -->
+  <main id="main">
+    <div id="0" class="movie-card">
+
+    </div>
+  </main>
+  
+  <!-- Modal Dialog Code -->
   <button id="modal-button">Add New Movie</button>
   <div id="my-modal" class="modal">
 
     <div class="modal-content">
-      <p>Title:<input type="text" name="new-movie"></p>
-      <p>Director:<input type="text" name="new-movie"></p>
-      <p>Runtime:<input type="text" name="new-movie"></p>
-      <p>Have you watched this movie?<input type="radio" name="new-movie" value="true">Yes<input type="radio" name="new-movie" value="false">No.</p>
-      <button id="add-movie">Add Movie</button><button id="close-modal">Cancel</button>
+      <p>Title:<input id="title" type="text" name="new-movie"></p>
+      <p>Director:<input id="director" type="text" name="new-movie"></p>
+      <p>Runtime:<input id="runtime" type="text" name="new-movie"></p>
+      <p>Have you watched this movie?<input id="watched" type="radio" name="new-movie" value="true">Yes<input type="radio" name="new-movie" value="false">No.</p>
+      <button id="add-movie">Add Movie</button>
+      <button id="reset-modal">Reset</button>
+      <button id="close-modal">Cancel</button>
     </div>
 
   </div>
