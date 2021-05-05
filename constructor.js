@@ -1,6 +1,6 @@
-function Book(title, author, pages, read) {
+function Book(title, director, runtime, watched) {
   this.title = title;
-  this.author = author;
+  this.director = director;
   this.pages = Number(pages);
   this.read = Boolean;
   this.info = () => {
