@@ -86,7 +86,7 @@ function getMovieInfo(pos) {
 }
 
 function viewModal() {
-  modal.style.display = 'block';
+  modal.style.display = 'flex';
 }
 
 function modalClose() {
@@ -99,7 +99,7 @@ const modal = document.getElementById('my-modal');
 
 const modalButton = document.getElementById('modal-button');
 modalButton.addEventListener('click', viewModal);
-text-decoration
+
 const closeModal = document.getElementById('close-modal');
 closeModal.addEventListener('click', modalClose);
 
