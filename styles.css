@@ -1,22 +1,54 @@
-/* body {
-  background-color: black;
-} */
+body {
+  background-color: rgb(47, 47, 47);
+}
 
 main {
   display: grid;
-  grid-template-columns: 300px 300px 300px;
+  grid-template-columns: 15rem 15rem;
+  justify-content: center;
   gap: 10px;
+  transition-delay: 1000;
 }
 
 .movie-card {
   grid-template-columns: 70px 70px 70px;
-  background-color: lightgray;
+  background-color: rgb(48, 68, 155);
   border-radius: 1em;
+  border: rgb(206, 93, 41) solid 2px;
+  color: white;
+  font-family: 'Cascadia Code', sans-serif;
+  transition-delay: 1000;
 }
+
+/* :hover.movie-card {
+  background-color: orange;
+} */
+#toggle-movie {
+  margin-left: 10px;
+}
+
+#del-item {
+  margin-top: 5px;
+}
+
+ul #del-item {
+  display: flex;
+
+  justify-self: center;
+}
+
 
 ul {
   list-style-type: none;
 }
+
+#modal-container {
+  
+  display: grid;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 
 .modal {
   display: none;

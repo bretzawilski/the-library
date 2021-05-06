@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  
   <!-- Movie Card Section -->
   <main id="main">
     <div id="0" class="movie-card">
@@ -16,21 +17,25 @@
   </main>
   
   <!-- Modal Dialog Code -->
-  <button id="modal-button">Add New Movie</button>
-  <div id="my-modal" class="modal">
+  <div id="modal-container">
+    <button id="modal-button">Add New Movie</button>
+    <div id="my-modal" class="modal">
 
-    <div class="modal-content">
-      <p>Title:<input id="title" type="text" name="new-movie"></p>
-      <p>Director:<input id="director" type="text" name="new-movie"></p>
-      <p>Runtime:<input id="runtime" type="text" name="new-movie"></p>
-      <p>Watched?<input id="watched" type="checkbox" name="new-movie"></p>
-      <button id="add-movie">Add Movie</button>
-      <button id="reset-modal">Reset</button>
-      <button id="close-modal">Cancel</button>
+      <div class="modal-content">
+        <p>Title:<input id="title" type="text" name="new-movie"></p>
+        <p>Director:<input id="director" type="text" name="new-movie"></p>
+        <p>Runtime:<input id="runtime" type="text" name="new-movie"></p>
+        <p>Watched?
+          <input id="watched" type="checkbox" value="true" name="new-movie"></p>
+          <!-- <input id="watched" type="radio" value="Watched" name="new-movie">Yes<br>
+          <input id="unwatched" type="radio" value="Unwatched" name="new-movie">No</p> -->
+        <button id="add-movie">Add Movie</button>
+        <button id="reset-modal">Reset</button>
+        <button id="close-modal">Cancel</button>
+      </div>
+
     </div>
-
   </div>
-  
 </body>
 <script type="text/javascript" src="script.js"></script>
 </html>

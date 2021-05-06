@@ -1,5 +1,10 @@
+Version 4
+[] Stretch goal: Attach this to a Firebase database
+[] Design should be more functional or intuitive
+[] Watched should be a tick-box indicating watched or unwatched
+
 Version 3
-[] Should have a function to display movies in array on page
+[x] Should have a function to display movies in array on page
 
 Version 2
 [x] Website should have a form to submit information for a new movie
