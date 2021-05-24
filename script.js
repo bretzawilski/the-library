@@ -14,12 +14,14 @@ let myLibrary = [
   }
 ];
 
-function Movie(title, director, runtime, watched) {
-  this.title = title;
-  this.director = director;
-  this.runtime = runtime;
-  this.watched = watched;
-  this.info = () => {
+class Movie {
+  constructor(title, director, runtime, watched){
+    this.title = title;
+    this.director = director;
+    this.runtime = runtime;
+    this.watched = watched;
+  }
+  info = () => {
     if (watched) {
       var status = `I've watched this movie`;
     } else {
@@ -114,7 +116,7 @@ function clearSelections() {
  document.getElementById('title').value = null;
  document.getElementById('director').value = null;
  document.getElementById('runtime').value = null;
- document.getElementById('watched').value = undefined;
+ document.getElementById('watched').checked = false;
 
 }
 
