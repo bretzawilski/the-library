@@ -1,3 +1,25 @@
+// import "firebase";
+
+// (function () {
+//   const config = {
+//     apiKey: "AIzaSyB2yPj9v-6gxX8ecAv2nBTOFjeOfbXARck",
+//     authDomain: "movie-library-cdbba.firebaseapp.com",
+//     databaseURL: "https://movie-library-cdbba-default-rtdb.firebaseio.com",
+//     projectId: "movie-library-cdbba",
+//     storageBucket: "movie-library-cdbba.appspot.com",
+//     messagingSenderId: "551772194474",
+//     appId: "1:551772194474:web:bde28f82bee7a7a99772d3",
+//     measurementId: "G-KCSL2860PK",
+//   };
+//   firebase.initializeApp(config);
+
+//   constpreObject = document.getElementById("object");
+
+//   const dbRefObject = firebase.database().ref().child("object");
+
+//   dbRefObject.on("value", (snap) => console.log(snap.val()));
+// })();
+
 // Movies live in this array
 const myLibrary = [
   {

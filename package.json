@@ -1,0 +1,23 @@
+{
+  "name": "the-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "constructor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bretzawilski/the-library.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bretzawilski/the-library/issues"
+  },
+  "homepage": "https://github.com/bretzawilski/the-library#readme",
+  "dependencies": {
+    "firebase": "^8.6.2"
+  }
+}
