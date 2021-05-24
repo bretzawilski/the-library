@@ -99,6 +99,7 @@ const initialize = () => {
   const modal = document.getElementById("my-modal");
   const viewModal = () => (modal.style.display = "grid");
   const hideModal = () => (modal.style.display = "none");
+
   const main = document.getElementById("main");
 
   const addNewMovieButton = document.getElementById("add-new-movie");
