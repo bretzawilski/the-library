@@ -12,6 +12,60 @@ const myLibrary = [
     year: 2002,
     watched: "Unwatched",
   },
+  {
+    title: "Spiderman 2",
+    director: "Sam Raimi",
+    year: 2002,
+    watched: "Unwatched",
+  },
+  {
+    title: "Spiderman 2",
+    director: "Sam Raimi",
+    year: 2002,
+    watched: "Unwatched",
+  },
+  {
+    title: "Spiderman 2",
+    director: "Sam Raimi",
+    year: 2002,
+    watched: "Unwatched",
+  },
+  {
+    title: "Spiderman 2",
+    director: "Sam Raimi",
+    year: 2002,
+    watched: "Unwatched",
+  },
+  {
+    title: "Spiderman 2",
+    director: "Sam Raimi",
+    year: 2002,
+    watched: "Unwatched",
+  },
+  {
+    title: "Spiderman 2",
+    director: "Sam Raimi",
+    year: 2002,
+    watched: "Unwatched",
+  },
+  {
+    title: "Spiderman 2",
+    director: "Sam Raimi",
+    year: 2002,
+    watched: "Unwatched",
+  },
+  {
+    title: "Spiderman 2",
+    director: "Sam Raimi",
+    year: 2002,
+    watched: "Unwatched",
+  },
+  {
+    title: "Spiderman 2",
+    director: "Sam Raimi",
+    year: 2002,
+    watched: "Unwatched",
+  },
 ];
 
 class Movie {
@@ -23,7 +77,7 @@ class Movie {
   }
 }
 
-function addMovieToLibrary() {
+const addMovieToLibrary = () => {
   let title = document.getElementById("title").value;
   let director = document.getElementById("director").value;
   let year = document.getElementById("year").value;
@@ -33,9 +87,9 @@ function addMovieToLibrary() {
 
   myLibrary.push(newMovie);
   // clearSelections();
-  hideModal();
+  active.hideModal();
   displayMovies();
-}
+};
 
 // let [ title, director, year, watched ] = myLibrary[0];
 
@@ -49,6 +103,8 @@ const displayMovies = () => {
 
     const movieCard = document.createElement("div");
     movieCard.classList = "movie-card";
+    movieCard.id = "div-" + i;
+
     const displayUl = document.createElement("ul");
 
     const addTitle = document.createElement("li");
@@ -63,10 +119,22 @@ const displayMovies = () => {
     const addWatched = document.createElement("li");
     addWatched.innerText = watched;
 
+    const removeButton = document.createElement("button");
+    removeButton.innerText = "Remove Movie";
+    removeButton.id = "remove-" + i;
+    removeButton.addEventListener("click", removeMovieFromLibrary);
+
+    const toggleButton = document.createElement("button");
+    toggleButton.innerText = "Toggle Watched";
+    toggleButton.id = "toggle-" + i;
+    toggleButton.addEventListener("click", toggleMovie);
+
     displayUl.appendChild(addTitle);
     displayUl.appendChild(addDirector);
     displayUl.appendChild(addYear);
     displayUl.appendChild(addWatched);
+    displayUl.appendChild(toggleButton);
+    displayUl.appendChild(removeButton);
 
     movieCard.appendChild(displayUl);
 
@@ -74,25 +142,21 @@ const displayMovies = () => {
   }
 };
 
-// const accessModal = () => {
-//   const modal = document.getElementById("my-modal");
-//   const viewModal = () => (modal.style.display = "grid");
-//   const hideModal = () => (modal.style.display = "none");
+const removeMovieFromLibrary = (event) => {
+  let pos = event.currentTarget.id.split("-")[1];
+  myLibrary.splice(pos, 1);
+  displayMovies();
+};
 
-//   return {
-//     modal,
-//     viewModal,
-//     hideModal,
-//   };
-// };
-
-// function viewModal() {
-//   modal.style.display = "grid";
-// }
-
-// function hideModal() {
-//   modal.style.display = "none";
-// }
+const toggleMovie = (event) => {
+  let pos = event.currentTarget.id.split("-")[1];
+  if (myLibrary[pos].watched === "Watched") {
+    myLibrary[pos].watched = "Unwatched";
+  } else {
+    myLibrary[pos].watched = "Watched";
+  }
+  displayMovies();
+};
 
 // Buttons and eventListeners
 const initialize = () => {
@@ -100,16 +164,16 @@ const initialize = () => {
   const viewModal = () => (modal.style.display = "grid");
   const hideModal = () => (modal.style.display = "none");
 
-  const main = document.getElementById("main");
-
   const addNewMovieButton = document.getElementById("add-new-movie");
   addNewMovieButton.addEventListener("click", viewModal);
 
-  const addMovieToLibraryButton = document.getElementById("add-movie");
-  addMovieToLibraryButton.addEventListener("click", addMovieToLibrary);
-
   const cancelButton = document.getElementById("cancel-button");
   cancelButton.addEventListener("click", hideModal);
+
+  const main = document.getElementById("main");
+
+  const addMovieToLibraryButton = document.getElementById("add-movie");
+  addMovieToLibraryButton.addEventListener("click", addMovieToLibrary);
 
   return {
     modal,
@@ -124,4 +188,5 @@ const initialize = () => {
 
 // Initial Program Run
 initialize();
+const active = initialize();
 displayMovies();

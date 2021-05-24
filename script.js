@@ -36,18 +36,18 @@ class Movie {
 //   myLibrary.push(shortCode);
 // }
 
-function displayMovies() {
+const displayMovies = () => {
   let main = document.getElementById('main');
   main.innerHTML = '';
 
   for (i = 0; i < myLibrary.length; i++) {
     let card = document.createElement('div');
-    card.id = i;
+    card.id = "library-" + i;
     card.classList = 'movie-card';
     let cardButtons = document.createElement('div');
     cardButtons.classList = 'card-buttons';
     let delButton = document.createElement('button');
-    delButton.id = 'del-item-' + i ;
+    delButton.id = 'del-item-' + i;
     delButton.textContent = 'Remove Movie';
     delButton.classList = 'del-button';
 
@@ -59,7 +59,7 @@ function displayMovies() {
     let movieFile1 = document.createElement('li');
     let movieFile2 = document.createElement('li');
     let movieFile3 = document.createElement('li');
-    let movieFile4 = document.createElement('li');  
+    let movieFile4 = document.createElement('li');
     
     movieFile1.innerText = myLibrary[i].title;
     movieFile2.innerText = myLibrary[i].director;
@@ -72,12 +72,11 @@ function displayMovies() {
     cardInfo.appendChild(movieFile3);
     cardInfo.appendChild(movieFile4);
     cardInfo.appendChild(cardButtons);
-    card.appendChild(cardInfo); 
+    card.appendChild(cardInfo);
     main.append(card);
   }
 
-
-}
+};
 
 function addMovieToLibrary() {
   let title = document.getElementById('title').value;
@@ -105,11 +104,12 @@ function addMovieToLibrary() {
 }
 
 const remove = (event) => {
-  let pos = event.currentTarget.id.split('-')[2];
+  let removePos = event.currentTarget.id.split('-')[2];
+  let pos = 'library-' + removePos;
   myLibrary.splice(pos, 1);
   displayMovies();
   removeSetup();
-  console.log('Bye Felicia');
+  console.log(removePos);
 }
 
 function clearSelections() {
