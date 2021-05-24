@@ -35,14 +35,14 @@ const myLibrary = [
     watched: "Unwatched",
   },
   {
-    title: "Spiderman 2",
-    director: "Sam Raimi",
+    title: "Sightseers",
+    director: "Ben Wheatley",
     year: 2002,
     watched: "Unwatched",
   },
   {
-    title: "Spiderman 2",
-    director: "Sam Raimi",
+    title: "Still Walking",
+    director: "Hirokazu Koreeda",
     year: 2002,
     watched: "Unwatched",
   },

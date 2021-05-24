@@ -2,6 +2,11 @@ body {
   background-color: rgb(47, 47, 47);
 }
 
+h1 {
+  color: white;
+  text-align: center;
+}
+
 main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -12,12 +17,13 @@ main {
 
 .movie-card {
   grid-template-columns: 70px 70px 70px;
-  background-color: rgb(48, 68, 155);
+  background: linear-gradient(to left, rgb(0, 79, 198), rgb(154, 47, 47));
   border-radius: 1em;
   border: rgb(206, 93, 41) solid 2px;
   color: white;
   font-family: "Cascadia Code", sans-serif;
   transition-delay: 1000;
+  box-shadow: inset 0 0 10px rgb(0, 0, 0);
 }
 
 #toggle-movie {
